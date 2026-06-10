@@ -1,7 +1,7 @@
 """
 CODE KICKSTART — KlantAssistent (WerkZeker Nederland)
 -----------------------------------------------------
-
+# test
 Context:
 Dit project is onderdeel van de training Code Kickstart.
 Je bouwt een eenvoudige Python applicatie die gegevens van burgers/aanvragers verwerkt
