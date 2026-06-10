@@ -73,12 +73,20 @@ print(f"You have {len(shopping_list)} items on your shopping list.")
 # ------------------------------------------------------------
 
 # Create a list called friends with three names.
+friends = ["Dennis", "Frank", "Koen"]
+
 # Add one name.
+friends.append("Tom")
+
 # Remove one name.
+friends.remove("Koen")
+
 # Print the full list.
+for friend in friends:
+    print(friend)
+
 # Print how many friends are in the list.
-
-
+print(f"You have {len(friends)} friends. Sad :(")
 
 # ============================================================
 # PART 2 - EXPANDING AND UPDATING DICTIONARIES
