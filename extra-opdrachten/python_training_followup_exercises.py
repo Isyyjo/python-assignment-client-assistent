@@ -29,10 +29,14 @@
 # ------------------------------------------------------------
 
 # Create a list called animals with two animals.
+animals = ["dog", "cat"]
+
 # Add a third animal with .append()
+animals.append("lemur")
+
 # Print the list.
-
-
+for animal in animals:
+    print(animal)
 
 # ------------------------------------------------------------
 # Assignment 2
