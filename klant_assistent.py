@@ -2,7 +2,7 @@
 CODE KICKSTART — KlantAssistent (WerkZeker Nederland)
 -----------------------------------------------------
 
-Context: n
+Context: 
 Dit project is onderdeel van de training Code Kickstart.
 Je bouwt een eenvoudige Python applicatie die gegevens van burgers/aanvragers verwerkt
 en op basis daarvan één advieslabel genereert.
