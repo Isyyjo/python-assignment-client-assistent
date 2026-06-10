@@ -58,8 +58,11 @@ for city in cities:
 # ------------------------------------------------------------
 
 # Create a list called shopping_list with four items.
+shopping_list = ["eggs", "banana", "tomatoes", "deoderant"]
+
 # Print how many items are in the list.
-#
+print(f"You have {len(shopping_list)} items on your shopping list.")
+
 # Example output:
 # You have 4 items on your shopping list.
 
