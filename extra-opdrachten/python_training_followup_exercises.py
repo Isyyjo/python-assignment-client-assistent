@@ -43,9 +43,14 @@ for animal in animals:
 # ------------------------------------------------------------
 
 # Create a list called cities with three cities.
-# Remove one city with .remove()
-# Print the list.
+cities = ["Amsterdam", "Italy", "Paris"]
 
+# Remove one city with .remove()
+cities.remove("Italy")
+
+# Print the list.
+for city in cities:
+    print(city)
 
 
 # ------------------------------------------------------------
