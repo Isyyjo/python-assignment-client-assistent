@@ -47,6 +47,8 @@ students = [
 ]
 
 # FUNCTION DEFINITIONS
+
+# print lijst met studenten
 def show_students():
     print("----- STUDENTS -----")
     for index, student in enumerate(students):
@@ -64,6 +66,7 @@ def show_students():
 
     print("--------------------")
 
+# voeg een student toe aan lijst
 def add_student():
     name = input("Name: ")
     age = int(input("Age: "))
@@ -76,6 +79,7 @@ def add_student():
 
     students.append(student)
 
+# wijzig de gegevens van een student
 def edit_students():
     number = int(input("Student number: "))
     index = number - 1
@@ -86,6 +90,7 @@ def edit_students():
     students[index]["name"] = name
     students[index]["age"] = age
 
+# zet status van student op "inactive"
 def deactivate_student():
     number = int(input("Student number: "))
     index = number - 1
