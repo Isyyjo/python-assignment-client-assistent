@@ -403,10 +403,15 @@ print(hobbies)
 # The function gets one parameter: name.
 # The function prints:
 # Hello, ...
-#
-# Ask the user for their name with input().
-# Call the function with the name.
+def greet_user(name):
+    print(f"Hello, {name}!")
 
+# Ask the user for their name with input().
+print("Please state your name: ")
+name = input()
+
+# Call the function with the name.
+greet_user(name)
 
 
 # ------------------------------------------------------------
