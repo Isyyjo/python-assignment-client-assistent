@@ -363,8 +363,19 @@ print(f"Welcome, {username}!")
 # ------------------------------------------------------------
 
 # Ask the user for their age.
+age = input("Please state your age: ")
+user_age = float(age)
+
 # Check whether the user is 18 or older.
 # Print whether the user is an adult or underage.
+if user_age >= 18:
+    print("You are an adult.")
+elif user_age <= 4:
+    print("You are a baby!")
+elif user_age <= 18:
+    print("You are underage. You child...")
+else:
+    print("How are you alive?")
 
 
 
