@@ -200,10 +200,15 @@ print(profile)
 # Create a function called print_animals.
 # The function gets one parameter: animals.
 # The function prints each animal.
-#
-# Create a list with three animals.
-# Call the function with your list.
+def print_animals(animals):
+    for animal in animals:
+        print(animal)
 
+# Create a list with three animals.
+animals = ["dog", "cat", "parrot"]
+
+# Call the function with your list.
+print_animals(animals)
 
 
 # ------------------------------------------------------------
