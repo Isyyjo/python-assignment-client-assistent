@@ -271,10 +271,19 @@ show_passed_grades(grades)
 # Title: ...
 # Year: ...
 # Genre: ...
-#
-# Create a dictionary for a movie.
-# Call the function.
+def show_movie(movie):
+    print(f"Title: {movie["title"]}")
+    print(f"Year: {movie["year"]}")
+    print(f"Genre: {movie["genre"]}")
 
+# Create a dictionary for a movie.
+movie = {
+    "title": "Dunkirk",
+    "year": "2017",
+    "genre": "Action"
+}
+# Call the function.
+show_movie(movie)
 
 
 # ------------------------------------------------------------
