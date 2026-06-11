@@ -443,12 +443,26 @@ print(user)
 # ============================================================
 
 # Create an empty list called tasks.
+tasks = []
 # Ask the user for three tasks.
+print("Give me a task (1/3): ")
+task_1 = input()
+print("Give me another task (2/3): ")
+task_2 = input()
+print("And another (3/3): ")
+task_3 = input()
+
 # Add each task to the list.
+tasks.append(task_1)
+tasks.append(task_2)
+tasks.append(task_3)
+
 # Print:
 # You have 3 tasks:
+print(f"You have {len(tasks)} tasks:")
 # Then print each task on a new line.
-
+for task in tasks:
+    print(f"- {task}")
 
 
 # ============================================================
