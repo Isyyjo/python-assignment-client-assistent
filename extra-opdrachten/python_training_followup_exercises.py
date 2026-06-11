@@ -321,10 +321,20 @@ print(player)
 # - name
 # - age
 # - hobbies
-#
+profile = {
+    "name": "John Tinder",
+     "age": 21,
+     "hobbies": ["long walks on the beach", "reading", "poetry"]
+}
+
+def print_profile(profile):
+    print(f"{profile["name"]}, {profile["age"]}")
+    for hobby in profile["hobbies"]:
+        print(hobby) 
+
 # The function should print the name and age.
 # Then it should loop through the hobbies and print each hobby.
-
+print_profile(profile)
 
 
 # ============================================================
