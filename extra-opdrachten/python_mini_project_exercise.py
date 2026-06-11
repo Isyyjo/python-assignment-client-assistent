@@ -23,14 +23,24 @@
 # Assignment 1
 #
 # Create a dictionary called student.
+student = {}
+
 # Ask the user for:
 # - name
 # - age
 # - city
-#
 # Store the answers in the dictionary.
-# Print the dictionary.
+print("Please state your name: ")
+student["name"] = input()
 
+print("Please state your age: ")
+student["age"] = input()
+
+print("What city do you live in? ")
+student["city"] = input()
+
+# Print the dictionary.
+print(student)
 
 
 # ============================================================
