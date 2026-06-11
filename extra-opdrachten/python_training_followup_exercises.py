@@ -108,9 +108,15 @@ print(f"You have {len(friends)} friends. Sad :(")
 # - title
 # - author
 # - pages
-#
-# Print the title of the book.
+book = {
+    "title": "The Gunslinger",
+    "author": "Stephen King",
+    "pages": 336
+}
 
+
+# Print the title of the book.
+print(book["title"])
 
 
 # ------------------------------------------------------------
@@ -122,10 +128,16 @@ print(f"You have {len(friends)} friends. Sad :(")
 # - brand
 # - model
 # - price
-#
-# Change the price.
-# Print the dictionary.
+phone = {
+    "brand": "Apple",
+    "model": "Iphone 15",
+    "price": 689
+}
 
+# Change the price.
+phone["price"] = 300
+# Print the dictionary.
+print(phone)
 
 
 # ------------------------------------------------------------
@@ -136,10 +148,16 @@ print(f"You have {len(friends)} friends. Sad :(")
 # It should have:
 # - title
 # - year
-#
-# Add a new key called genre.
-# Print the dictionary.
+movie = {
+    "title": "Whiplash",
+    "year": "2014"
+}
 
+# Add a new key called genre.
+movie["genre"] = "drama"
+
+# Print the dictionary.
+print(movie)
 
 
 # ------------------------------------------------------------
@@ -151,11 +169,20 @@ print(f"You have {len(friends)} friends. Sad :(")
 # - name
 # - age
 # - city
-#
-# Change the city.
-# Add a key called hobbies with a list of two hobbies.
-# Print the full profile.
+profile = {
+    "name": "Ismaël",
+    "age": "24",
+    "city": "Almere"
+}
 
+# Change the city.
+profile["city"] = "Amsterdam"
+
+# Add a key called hobbies with a list of two hobbies.
+profile["hobbies"] = ["coding", "gaming"]
+
+# Print the full profile.
+print(profile)
 
 
 # ============================================================
@@ -173,10 +200,15 @@ print(f"You have {len(friends)} friends. Sad :(")
 # Create a function called print_animals.
 # The function gets one parameter: animals.
 # The function prints each animal.
-#
-# Create a list with three animals.
-# Call the function with your list.
+def print_animals(animals):
+    for animal in animals:
+        print(animal)
 
+# Create a list with three animals.
+animals = ["dog", "cat", "parrot"]
+
+# Call the function with your list.
+print_animals(animals)
 
 
 # ------------------------------------------------------------
@@ -186,12 +218,17 @@ print(f"You have {len(friends)} friends. Sad :(")
 # Create a function called count_items.
 # The function gets one parameter: items.
 # The function returns the number of items in the list.
-#
+def count_items(items):
+    return len(items)
+
 # Create a list with four items.
+items = ["gun", "coin", "pickup", "xp"]
+
 # Call the function.
+number_of_items = count_items(items)
+
 # Print the result.
-
-
+print(number_of_items)
 
 # ------------------------------------------------------------
 # Assignment 11
@@ -202,10 +239,18 @@ print(f"You have {len(friends)} friends. Sad :(")
 # The function loops through the grades.
 # If a grade is 6 or higher, print:
 # Passed: 7
-#
+def show_passed_grades(grades):
+    for grade in grades:
+        if grade >= 6:
+            print(f"You passed! Passing grade: {grade}")
+        else:
+            continue
+    
 # Create a list with at least five grades.
-# Call the function.
+grades = [8, 6, 4, 7, 2]
 
+# Call the function.
+show_passed_grades(grades)
 
 
 # ============================================================
