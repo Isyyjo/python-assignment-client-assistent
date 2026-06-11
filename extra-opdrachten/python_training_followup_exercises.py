@@ -169,11 +169,20 @@ print(movie)
 # - name
 # - age
 # - city
-#
-# Change the city.
-# Add a key called hobbies with a list of two hobbies.
-# Print the full profile.
+profile = {
+    "name": "Ismaël",
+    "age": "24",
+    "city": "Almere"
+}
 
+# Change the city.
+profile["city"] = "Amsterdam"
+
+# Add a key called hobbies with a list of two hobbies.
+profile["hobbies"] = ["coding", "gaming"]
+
+# Print the full profile.
+print(profile)
 
 
 # ============================================================
