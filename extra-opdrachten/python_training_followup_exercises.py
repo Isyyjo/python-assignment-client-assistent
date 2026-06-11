@@ -218,12 +218,17 @@ print_animals(animals)
 # Create a function called count_items.
 # The function gets one parameter: items.
 # The function returns the number of items in the list.
-#
+def count_items(items):
+    return len(items)
+
 # Create a list with four items.
+items = ["gun", "coin", "pickup", "xp"]
+
 # Call the function.
+number_of_items = count_items(items)
+
 # Print the result.
-
-
+print(number_of_items)
 
 # ------------------------------------------------------------
 # Assignment 11
