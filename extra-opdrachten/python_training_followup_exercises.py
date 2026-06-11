@@ -351,9 +351,11 @@ print_profile(profile)
 # ------------------------------------------------------------
 
 # Ask the user for their name.
+username = input("Hello, user! Please state your name: ")
+
 # Print:
 # Welcome, ...
-
+print(f"Welcome, {username}!")
 
 
 # ------------------------------------------------------------
@@ -361,8 +363,19 @@ print_profile(profile)
 # ------------------------------------------------------------
 
 # Ask the user for their age.
+age = input("Please state your age: ")
+user_age = float(age)
+
 # Check whether the user is 18 or older.
 # Print whether the user is an adult or underage.
+if user_age >= 18:
+    print("You are an adult.")
+elif user_age <= 4:
+    print("You are a baby!")
+elif user_age <= 18:
+    print("You are underage. You child...")
+else:
+    print("How are you alive?")
 
 
 
@@ -371,9 +384,15 @@ print_profile(profile)
 # ------------------------------------------------------------
 
 # Ask the user for a hobby.
-# Add the hobby to a list called hobbies.
-# Print the list.
+print("What is your hobby?")
+user_hobby = input("Enter your hobby: ")
 
+# Add the hobby to a list called hobbies.
+hobbies = []
+hobbies.append(user_hobby)
+
+# Print the list.
+print(hobbies)
 
 
 # ------------------------------------------------------------
@@ -384,10 +403,15 @@ print_profile(profile)
 # The function gets one parameter: name.
 # The function prints:
 # Hello, ...
-#
-# Ask the user for their name with input().
-# Call the function with the name.
+def greet_user(name):
+    print(f"Hello, {name}!")
 
+# Ask the user for their name with input().
+print("Please state your name: ")
+name = input()
+
+# Call the function with the name.
+greet_user(name)
 
 
 # ------------------------------------------------------------
@@ -395,13 +419,23 @@ print_profile(profile)
 # ------------------------------------------------------------
 
 # Create a dictionary called user.
+user = {}
 # Ask the user for:
 # - name
 # - city
-#
-# Store both answers in the dictionary.
-# Print the dictionary.
+print("Please state your name, again: ")
+name = input()
+print(f"Hi, {name}!")
 
+print("What city do you live in?")
+city = input()
+
+# Store both answers in the dictionary.
+user["name"] = name
+user["city"] = city
+
+# Print the dictionary.
+print(user)
 
 
 # ============================================================
@@ -409,12 +443,26 @@ print_profile(profile)
 # ============================================================
 
 # Create an empty list called tasks.
+tasks = []
 # Ask the user for three tasks.
+print("Give me a task (1/3): ")
+task_1 = input()
+print("Give me another task (2/3): ")
+task_2 = input()
+print("And another (3/3): ")
+task_3 = input()
+
 # Add each task to the list.
+tasks.append(task_1)
+tasks.append(task_2)
+tasks.append(task_3)
+
 # Print:
 # You have 3 tasks:
+print(f"You have {len(tasks)} tasks:")
 # Then print each task on a new line.
-
+for task in tasks:
+    print(f"- {task}")
 
 
 # ============================================================
