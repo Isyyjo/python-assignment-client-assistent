@@ -23,24 +23,24 @@
 # Assignment 1
 #
 # Create a dictionary called student.
-student = {}
+# student = {}
 
 # Ask the user for:
 # - name
 # - age
 # - city
 # Store the answers in the dictionary.
-print("Please state your name: ")
-student["name"] = input()
+# print("Please state your name: ")
+# student["name"] = input()
 
-print("Please state your age: ")
-student["age"] = input()
+# print("Please state your age: ")
+# student["age"] = input()
 
-print("What city do you live in? ")
-student["city"] = input()
+# print("What city do you live in? ")
+# student["city"] = input()
 
 # Print the dictionary.
-print(student)
+# print(student)
 
 
 # ============================================================
@@ -54,14 +54,31 @@ print(student)
 # - name
 # - age
 # - city
-#
-# The function creates a dictionary with that information.
-# The function returns the dictionary.
-#
+def create_student():
+    print("Welcome new student!")
+    print("Please enter your name: ")
+    name = input()
+    print("Please enter your age: ")
+    age = input()
+    print("What city do you live in? ")
+    city = input()
+
+    # The function creates a dictionary with that information.
+    student = {
+            "name": name,
+            "age": age,
+            "city": city
+        }
+    
+    # The function returns the dictionary.
+    return student
+
 # Call the function once.
 # Store the result in a variable.
-# Print the result.
+student1 = create_student()
 
+# Print the result.
+print(student1)
 
 
 # ============================================================
