@@ -271,10 +271,19 @@ show_passed_grades(grades)
 # Title: ...
 # Year: ...
 # Genre: ...
-#
-# Create a dictionary for a movie.
-# Call the function.
+def show_movie(movie):
+    print(f"Title: {movie["title"]}")
+    print(f"Year: {movie["year"]}")
+    print(f"Genre: {movie["genre"]}")
 
+# Create a dictionary for a movie.
+movie = {
+    "title": "Dunkirk",
+    "year": "2017",
+    "genre": "Action"
+}
+# Call the function.
+show_movie(movie)
 
 
 # ------------------------------------------------------------
@@ -284,14 +293,22 @@ show_passed_grades(grades)
 # Create a function called update_score.
 # The function gets one parameter: player.
 # Inside the function, add 10 to the player's score.
-#
+def update_score(player):
+    player["score"] += 10
+
 # Create a dictionary called player with:
 # - name
 # - score
-#
-# Call the function.
-# Print the player dictionary.
+player = {
+    "name": "Issyjo",
+    "score":  410
+}
 
+# Call the function.
+update_score(player)
+
+# Print the player dictionary.
+print(player)
 
 
 # ------------------------------------------------------------
@@ -304,10 +321,20 @@ show_passed_grades(grades)
 # - name
 # - age
 # - hobbies
-#
+profile = {
+    "name": "John Tinder",
+     "age": 21,
+     "hobbies": ["long walks on the beach", "reading", "poetry"]
+}
+
+def print_profile(profile):
+    print(f"{profile["name"]}, {profile["age"]}")
+    for hobby in profile["hobbies"]:
+        print(hobby) 
+
 # The function should print the name and age.
 # Then it should loop through the hobbies and print each hobby.
-
+print_profile(profile)
 
 
 # ============================================================
