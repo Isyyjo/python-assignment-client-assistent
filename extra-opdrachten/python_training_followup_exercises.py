@@ -384,9 +384,15 @@ else:
 # ------------------------------------------------------------
 
 # Ask the user for a hobby.
-# Add the hobby to a list called hobbies.
-# Print the list.
+print("What is your hobby?")
+user_hobby = input("Enter your hobby: ")
 
+# Add the hobby to a list called hobbies.
+hobbies = []
+hobbies.append(user_hobby)
+
+# Print the list.
+print(hobbies)
 
 
 # ------------------------------------------------------------
