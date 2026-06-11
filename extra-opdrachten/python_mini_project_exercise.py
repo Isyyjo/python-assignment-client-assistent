@@ -120,6 +120,7 @@ students.append(create_student())
 # City: ...
 # ----------
 def show_students(students):
+    print(" ")
     print("Student List: ")
     print("---------------")
     for student in students:
@@ -142,9 +143,17 @@ show_students(students)
 #
 # Else print:
 # Mila is underage
-#
-# Then loop through the students list and call check_age for each student.
+def check_age(student):
+    if float(student["age"]) >= 18 and float(student["age"]) <= 100:
+        print(f"{student["name"]} is an adult.")
+    elif float(student["age"]) <= 18 and float(student["age"]) >= 1:
+        print(f"{student["name"]} is underage.")
+    else:
+        print(f"{student["name"]} shouldn't be alive")
 
+# Then loop through the students list and call check_age for each student.
+for student in students:
+    check_age(student)
 
 
 # ============================================================
