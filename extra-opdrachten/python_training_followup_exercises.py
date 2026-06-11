@@ -108,9 +108,15 @@ print(f"You have {len(friends)} friends. Sad :(")
 # - title
 # - author
 # - pages
-#
-# Print the title of the book.
+book = {
+    "title": "The Gunslinger",
+    "author": "Stephen King",
+    "pages": 336
+}
 
+
+# Print the title of the book.
+print(book["title"])
 
 
 # ------------------------------------------------------------
