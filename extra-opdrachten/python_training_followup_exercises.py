@@ -419,13 +419,23 @@ greet_user(name)
 # ------------------------------------------------------------
 
 # Create a dictionary called user.
+user = {}
 # Ask the user for:
 # - name
 # - city
-#
-# Store both answers in the dictionary.
-# Print the dictionary.
+print("Please state your name, again: ")
+name = input()
+print(f"Hi, {name}!")
 
+print("What city do you live in?")
+city = input()
+
+# Store both answers in the dictionary.
+user["name"] = name
+user["city"] = city
+
+# Print the dictionary.
+print(user)
 
 
 # ============================================================
