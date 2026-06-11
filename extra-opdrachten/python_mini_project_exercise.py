@@ -97,11 +97,11 @@ students.append(create_student())
 students.append(create_student())
 
 # Print the full students list.
-print("Student List: ")
-for student in students:
-    print(f"Name: {student["name"]}")
-    print(f"Age: {student["age"]}")
-    print(f"City: {student["city"]}")
+# print("Student List: ")
+# for student in students:
+#     print(f"Name: {student["name"]}")
+#     print(f"Age: {student["age"]}")
+#     print(f"City: {student["city"]}")
 
 
 # ============================================================
@@ -119,9 +119,16 @@ for student in students:
 # Age: ...
 # City: ...
 # ----------
+def show_students(students):
+    print("Student List: ")
+    print("---------------")
+    for student in students:
+        print(f"Name: {student["name"]}")
+        print(f"Age: {student["age"]}")
+        print(f"City: {student["city"]}")
+        print("---------------")
 
-
-
+show_students(students)
 # ============================================================
 # PART 5 - CHECK ADULT OR UNDERAGE
 # ============================================================
