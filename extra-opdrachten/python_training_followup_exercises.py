@@ -351,9 +351,11 @@ print_profile(profile)
 # ------------------------------------------------------------
 
 # Ask the user for their name.
+username = input("Hello, user! Please state your name: ")
+
 # Print:
 # Welcome, ...
-
+print(f"Welcome, {username}!")
 
 
 # ------------------------------------------------------------
