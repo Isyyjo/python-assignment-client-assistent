@@ -148,10 +148,16 @@ print(phone)
 # It should have:
 # - title
 # - year
-#
-# Add a new key called genre.
-# Print the dictionary.
+movie = {
+    "title": "Whiplash",
+    "year": "2014"
+}
 
+# Add a new key called genre.
+movie["genre"] = "drama"
+
+# Print the dictionary.
+print(movie)
 
 
 # ------------------------------------------------------------
