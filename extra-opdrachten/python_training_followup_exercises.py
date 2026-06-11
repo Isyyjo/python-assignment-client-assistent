@@ -128,10 +128,16 @@ print(book["title"])
 # - brand
 # - model
 # - price
-#
-# Change the price.
-# Print the dictionary.
+phone = {
+    "brand": "Apple",
+    "model": "Iphone 15",
+    "price": 689
+}
 
+# Change the price.
+phone["price"] = 300
+# Print the dictionary.
+print(phone)
 
 
 # ------------------------------------------------------------
