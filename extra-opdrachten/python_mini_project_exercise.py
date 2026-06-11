@@ -75,10 +75,10 @@ def create_student():
 
 # Call the function once.
 # Store the result in a variable.
-student1 = create_student()
+# student1 = create_student()
 
 # Print the result.
-print(student1)
+# print(student1)
 
 
 # ============================================================
@@ -88,10 +88,20 @@ print(student1)
 # Assignment 3
 #
 # Create an empty list called students.
+students = []
+
 # Use the create_student function three times.
 # Add every student to the students list with .append()
-# Print the full students list.
+students.append(create_student())
+students.append(create_student())
+students.append(create_student())
 
+# Print the full students list.
+print("Student List: ")
+for student in students:
+    print(f"Name: {student["name"]}")
+    print(f"Age: {student["age"]}")
+    print(f"City: {student["city"]}")
 
 
 # ============================================================
