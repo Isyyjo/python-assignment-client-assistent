@@ -239,10 +239,18 @@ print(number_of_items)
 # The function loops through the grades.
 # If a grade is 6 or higher, print:
 # Passed: 7
-#
+def show_passed_grades(grades):
+    for grade in grades:
+        if grade >= 6:
+            print(f"You passed! Passing grade: {grade}")
+        else:
+            continue
+    
 # Create a list with at least five grades.
-# Call the function.
+grades = [8, 6, 4, 7, 2]
 
+# Call the function.
+show_passed_grades(grades)
 
 
 # ============================================================
