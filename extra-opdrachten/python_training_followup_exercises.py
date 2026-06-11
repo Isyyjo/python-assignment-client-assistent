@@ -293,14 +293,22 @@ show_movie(movie)
 # Create a function called update_score.
 # The function gets one parameter: player.
 # Inside the function, add 10 to the player's score.
-#
+def update_score(player):
+    player["score"] += 10
+
 # Create a dictionary called player with:
 # - name
 # - score
-#
-# Call the function.
-# Print the player dictionary.
+player = {
+    "name": "Issyjo",
+    "score":  410
+}
 
+# Call the function.
+update_score(player)
+
+# Print the player dictionary.
+print(player)
 
 
 # ------------------------------------------------------------
