@@ -165,10 +165,19 @@ for student in students:
 # Create a function called count_adults.
 # The function gets one parameter: students.
 # The function returns the number of adult students.
-#
+
+def count_adults(students):
+    adult_student_count = []
+    for student in students:    
+        if int(student["age"]) >= 18:
+            adult_student_count.append(student)
+    return adult_student_count
+
+adult_student_count = count_adults(students)
+
 # Print:
 # Number of adult students: ...
-
+print(f"Number of adult students: {len(adult_student_count)}")
 
 
 # ============================================================
