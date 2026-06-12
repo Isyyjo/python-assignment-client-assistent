@@ -23,14 +23,27 @@ Spelregels:
 - Werk toe naar een werkende terminal-applicatie
 """
 
-print("OUTPUT HELLO")
-
-#global variables
+#Lege klantenlijst
 klanten = []
 
+#Welkomstbericht
+def welkom():
+    print("")
+    print("Welkom!")
+    print("Hier kunt u klanten toevoegen en hun gegevens inzien")
+    print("")
 
+#Vraagt aantal klanten
+def vraag_aantal_klanten():
+    print("Hoe veel klanten wilt u toevoegen?")
+    aantal_klanten = int(input())
+    return aantal_klanten
+
+
+#Verzamelt klantgegevens
 def verzamel_klant():
-    klantgegevens = {}
+    klant = {}
+    print("")
     print("Hallo, nieuwe klant!")
     print("Wij hebben een aantal gegevens van u nodig.")
 
@@ -52,13 +65,14 @@ def verzamel_klant():
         print(" ERROR: niet bestaand klanttype")
         klanttype = input()
 
-    klantgegevens["naam"] = naam
-    klantgegevens["leeftijd"] = leeftijd
-    klantgegevens["besteding"] = besteding
-    klantgegevens["klanttype"] = klanttype
+    klant["naam"] = naam
+    klant["leeftijd"] = int(leeftijd)
+    klant["besteding"] = besteding
+    klant["klanttype"] = klanttype
 
-    klanten.append(klantgegevens)
+    klanten.append(klant)
 
+#Print klanten in klantenlijst
 def print_klanten():
     for klant in klanten:
         print("-----------")
@@ -68,69 +82,71 @@ def print_klanten():
         print(f"Klanttype: {klant["klanttype"]}")
         print("-----------")
 
-verzamel_klant()
-print_klanten()
-
+# Genereert advies voor klant op basis van klantgegevens
 def genereer_advies(klant):
-    """
-    Ontvangt één klant (dictionary) en retourneert één advieslabel (string).
+    if klant["klanttype"] == "premium":
+        return "Intensievere begeleiding (complex dossier)"
+    
+    elif klant["leeftijd"] >= 67:
+        return "AOW-check en extra begeleiding"
+    
+    elif int(klant["besteding"]) > 100:
+        return "Check aanvullende regelingen / samenloop"
+    
+    else:
+        return "Standaard dienstverlening"
 
-    Advieslabels (exact deze strings gebruiken):
-    - 'AOW-check en extra begeleiding'
-    - 'Check aanvullende regelingen / samenloop'
-    - 'Intensievere begeleiding (complex dossier)'
-    - 'Standaard dienstverlening'
-
-    Regels + prioriteit (hoog -> laag):
-    1) Klanttype == 'premium' -> 'Intensievere begeleiding (complex dossier)'
-    2) Leeftijd >= 67         -> 'AOW-check en extra begeleiding'
-    3) Besteding > 100        -> 'Check aanvullende regelingen / samenloop'
-    4) Anders                 -> 'Standaard dienstverlening'
-
-    Denkstappen:
-    1. Lees waarden uit de dictionary
-    2. Gebruik if / elif / else in de juiste volgorde (prioriteit)
-    3. Return één advieslabel
-    """
-    # TODO: implementeer deze functie
-    pass
-
-
+#Genereert samenvatting 
 def samenvatting(klanten):
-    """
-    Print een samenvatting van alle klanten en adviezen.
+    premium = []
+    senior = []
+    rich = []
+    overig = []
 
-    Verwachting (minimaal):
-    - Print het aantal klanten
-    - Print per advieslabel hoe vaak deze voorkomt
-
-    Denkstappen:
-    1. Loop over de lijst met klanten
-    2. Bepaal per klant het advies (gebruik genereer_advies)
-    3. Tel de adviezen (bijv. met een dict)
-    4. Print het overzicht netjes
-    """
-    # TODO: implementeer deze functie
-    pass
+    for klant in klanten:
+        if genereer_advies(klant) == "Intensievere begeleiding (complex dossier)":
+            premium.append(klant)
+        elif genereer_advies(klant) == "AOW-check en extra begeleiding":
+            senior.append(klant)
+        elif genereer_advies(klant) == "Check aanvullende regelingen / samenloop":
+            rich.append(klant)
+        else:
+            overig.append(klant)
+    print("SAMENVATTING")
+    print("----------")
+    print(f"Premium klanten: {len(premium)}")
+    print(f"Senior klanten: {len(senior)}")
+    print(f"aanvullende klanten: {len(rich)}")
+    print(f"Overige klanten: {len(overig)}")
+    print("----------")
 
 
 def main():
-    """
-    Hoofdprogramma van de applicatie.
+    #Welkomstbericht
+    welkom()
 
-    Programmaflow (pseudocode):
-    1. Print startbericht
-    2. Vraag hoeveel klanten worden ingevoerd (moet int zijn)
-    3. Maak een lege lijst voor klanten
-    4. Gebruik een loop om klanten te verzamelen (verzamel_klant)
-    5. Print per klant het advieslabel (genereer_advies)
-    6. Toon een samenvatting (samenvatting)
-    """
+    #Vraag aantal klanten
+    aantal_klanten = vraag_aantal_klanten()
+
+    #Verzamel klantgegevens
+    while len(klanten) < aantal_klanten:   
+        verzamel_klant()
+    print("")
+
+    #Print klantgegevens
+    print_klanten()
+    print("")
+
+    #print advies voor klanten
+    for klant in klanten:
+        print(f"ADVIES: {genereer_advies(klant)}")
+    print("")
+
+    #toon samenvatting
+    samenvatting(klanten)
+    
+    print("")
     print("KlantAssistent gestart (WerkZeker Nederland)")
-
-    # TODO: implementeer de hoofdlogica
-    pass
-
 
 if __name__ == "__main__":
     main()
