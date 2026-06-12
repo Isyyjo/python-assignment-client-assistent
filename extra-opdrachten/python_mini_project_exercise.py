@@ -23,14 +23,24 @@
 # Assignment 1
 #
 # Create a dictionary called student.
+# student = {}
+
 # Ask the user for:
 # - name
 # - age
 # - city
-#
 # Store the answers in the dictionary.
-# Print the dictionary.
+# print("Please state your name: ")
+# student["name"] = input()
 
+# print("Please state your age: ")
+# student["age"] = input()
+
+# print("What city do you live in? ")
+# student["city"] = input()
+
+# Print the dictionary.
+# print(student)
 
 
 # ============================================================
@@ -44,14 +54,31 @@
 # - name
 # - age
 # - city
-#
-# The function creates a dictionary with that information.
-# The function returns the dictionary.
-#
+def create_student():
+    print("Welcome new student!")
+    print("Please enter your name: ")
+    name = input()
+    print("Please enter your age: ")
+    age = input()
+    print("What city do you live in? ")
+    city = input()
+
+    # The function creates a dictionary with that information.
+    student = {
+            "name": name,
+            "age": age,
+            "city": city
+        }
+    
+    # The function returns the dictionary.
+    return student
+
 # Call the function once.
 # Store the result in a variable.
-# Print the result.
+# student1 = create_student()
 
+# Print the result.
+# print(student1)
 
 
 # ============================================================
@@ -61,10 +88,20 @@
 # Assignment 3
 #
 # Create an empty list called students.
+students = []
+
 # Use the create_student function three times.
 # Add every student to the students list with .append()
-# Print the full students list.
+students.append(create_student())
+students.append(create_student())
+students.append(create_student())
 
+# Print the full students list.
+# print("Student List: ")
+# for student in students:
+#     print(f"Name: {student["name"]}")
+#     print(f"Age: {student["age"]}")
+#     print(f"City: {student["city"]}")
 
 
 # ============================================================
@@ -82,9 +119,17 @@
 # Age: ...
 # City: ...
 # ----------
+def show_students(students):
+    print(" ")
+    print("Student List: ")
+    print("---------------")
+    for student in students:
+        print(f"Name: {student["name"]}")
+        print(f"Age: {student["age"]}")
+        print(f"City: {student["city"]}")
+        print("---------------")
 
-
-
+show_students(students)
 # ============================================================
 # PART 5 - CHECK ADULT OR UNDERAGE
 # ============================================================
@@ -98,9 +143,17 @@
 #
 # Else print:
 # Mila is underage
-#
-# Then loop through the students list and call check_age for each student.
+def check_age(student):
+    if float(student["age"]) >= 18 and float(student["age"]) <= 100:
+        print(f"{student["name"]} is an adult.")
+    elif float(student["age"]) <= 18 and float(student["age"]) >= 1:
+        print(f"{student["name"]} is underage.")
+    else:
+        print(f"{student["name"]} shouldn't be alive")
 
+# Then loop through the students list and call check_age for each student.
+for student in students:
+    check_age(student)
 
 
 # ============================================================
@@ -112,10 +165,19 @@
 # Create a function called count_adults.
 # The function gets one parameter: students.
 # The function returns the number of adult students.
-#
+
+def count_adults(students):
+    adult_student_count = []
+    for student in students:    
+        if int(student["age"]) >= 18:
+            adult_student_count.append(student)
+    return adult_student_count
+
+adult_student_count = count_adults(students)
+
 # Print:
 # Number of adult students: ...
-
+print(f"Number of adult students: {len(adult_student_count)}")
 
 
 # ============================================================
