@@ -25,32 +25,51 @@ Spelregels:
 
 print("OUTPUT HELLO")
 
+#global variables
+klanten = []
+
 
 def verzamel_klant():
-    """
-    Vraagt gegevens van één klant/aanvrager en retourneert een dictionary.
+    klantgegevens = {}
+    print("Hallo, nieuwe klant!")
+    print("Wij hebben een aantal gegevens van u nodig.")
 
-    Verwachte keys in de dictionary:
-    - naam (str)
-    - leeftijd (int)
-    - besteding (float)  -> bestedingsniveau per maand in euro's
-    - klanttype (str)    -> 'nieuw', 'bestaand', 'premium'
+    print("Wat is uw naam?")
+    naam = input()
 
-    Denkstappen (pseudocode):
-    1. Vraag de naam
-    2. Vraag de leeftijd (moet int worden)
-    3. Vraag het bestedingsniveau (moet float worden)
-    4. Vraag het klanttype (alleen nieuw/bestaand/premium)
-    5. Stop alles in een dictionary
-    6. Return de dictionary
+    print("Wat is uw leeftijd?")
+    leeftijd = input()
+    while not leeftijd.isdigit():
+        print("ERROR: voer een geldige leeftijd in")
+        leeftijd = input()
 
-    Let op (iteratie 4):
-    - Leeftijd en besteding moeten getallen zijn (anders opnieuw vragen)
-    - Klanttype mag alleen geldige waarden hebben (anders opnieuw vragen)
-    """
-    # TODO: implementeer deze functie
-    pass
+    print("Wat is uw bestedingslimiet per maand (in euro's)?")
+    besteding = input()
 
+    print("Wat is uw klanttype: nieuw, bestaand of premium?")
+    klanttype = input()
+    while klanttype not in ["nieuw", "bestaand", "premium"]:
+        print(" ERROR: niet bestaand klanttype")
+        klanttype = input()
+
+    klantgegevens["naam"] = naam
+    klantgegevens["leeftijd"] = leeftijd
+    klantgegevens["besteding"] = besteding
+    klantgegevens["klanttype"] = klanttype
+
+    klanten.append(klantgegevens)
+
+def print_klanten():
+    for klant in klanten:
+        print("-----------")
+        print(f"Naam: {klant["naam"]}")
+        print(f"Leeftijd: {klant["leeftijd"]}")
+        print(f"Bestedingsruimte: {klant["besteding"]}")
+        print(f"Klanttype: {klant["klanttype"]}")
+        print("-----------")
+
+verzamel_klant()
+print_klanten()
 
 def genereer_advies(klant):
     """
